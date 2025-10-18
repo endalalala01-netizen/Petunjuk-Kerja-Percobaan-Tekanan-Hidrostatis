@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosedur Percobaan Tekanan Hidrostatis - PhET Simulation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('https://z-cdn-media.chatglm.cn/files/c3647c7a-2d5b-443e-a0b0-206c44f3716b_pasted_image_1760781779658.png?auth_key=1792317869-419ff4997d6b4a118dc97aeb86d14fbf-0-dd43662cbd39a13f267533fbf5bdbc15');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .overlay {
+            background-color: rgba(0, 20, 40, 0.75);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.92);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #0d6efd;
+        }
+        
+        .header h1 {
+            color: #0a4d8c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #555;
+            font-size: 18px;
+        }
+        
+        .section-title {
+            color: #0a4d8c;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0d6efd;
+        }
+        
+        .step-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #0d6efd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s;
+        }
+        
+        .step-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background-color: #0d6efd;
+            color: white;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .btn-simulation {
+            background-color: #0a4d8c;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+        
+        .btn-simulation:hover {
+            background-color: #063870;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .formula-box {
+            background-color: #e9f2ff;
+            border: 1px solid #0d6efd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .formula {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0a4d8c;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <div class="content-container">
+                <div class="header">
+                    <h1><i class="fas fa-water"></i> Prosedur Percobaan Tekanan Hidrostatis</h1>
+                    <p>Menggunakan Simulasi PhET "Under Pressure"</p>
+                </div>
+                
+                <div class="formula-box">
+                    <div class="formula">P = ρ × g × h</div>
+                    <p>Dimana:</p>
+                    <p>P = Tekanan hidrostatis (Pa)</p>
+                    <p>ρ = Massa jenis fluida (kg/m³)</p>
+                    <p>g = Percepatan gravitasi (m/s²)</p>
+                    <p>h = Kedalaman (m)</p>
+                </div>
+                
+                <h2 class="section-title"><i class="fas fa-flask"></i> Prosedur Percobaan</h2>
+                
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <strong>Buka simulasi</strong> PhET "Under Pressure" melalui tautan yang telah disediakan.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <strong>Pilih mode</strong> "Pressure" pada menu simulasi untuk memulai eksplorasi tekanan hidrostatis.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <strong>Amati tangki air</strong> yang tersedia. Perhatikan skala kedalaman dan indikator tekanan yang tersedia.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">4</span>
+                    <strong>Uji pengaruh kedalaman:</strong> Geser sensor tekanan ke berbagai kedalaman (misalnya: 0m, 2m, 4m, 6m, 8m) dan catat nilai tekanan pada setiap kedalaman.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">5</span>
+                    <strong>Uji pengaruh massa jenis fluida:</strong> Ubah jenis fluida (air, minyak, gasoline, honey) dan amati perubahan tekanan pada kedalaman yang sama.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">6</span>
+                    <strong>Uji pengaruh gravitasi:</strong> Ubah nilai gravitasi (misalnya: Bumi, Bulan, Mars, Jupiter) dan amati perubahan tekanan pada kedalaman yang sama.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">7</span>
+                    <strong>Tambahkan beban:</strong> Tambahkan beban di atas permukaan air dan amati bagaimana tekanan di dalam air berubah.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">8</span>
+                    <strong>Uji dengan tabung berbentuk berbeda:</strong> Coba gunakan tabung dengan bentuk berbeda (lebar, sempit, atau bentuk lain) dan amati apakah bentuk tabung memengaruhi tekanan pada kedalaman yang sama.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">9</span>
+                    <strong>Uji tekanan di udara:</strong> Geser sensor tekanan ke atas permukaan air dan amati bagaimana tekanan atmosfer bekerja.
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">10</span>
+                    <strong>Uji dengan benda di dalam air:</strong> Masukkan benda ke dalam air dan amati bagaimana tekanan di sekitar benda tersebut.
+                </div>
+                
+                <div class="text-center">
+                    <a href="https://phet.colorado.edu/en/simulations/under-pressure" target="_blank" class="btn-simulation">
+                        <i class="fas fa-external-link-alt"></i> Buka Simulasi PhET
+                    </a>
+                </div>
+                
+                <div class="footer">
+                    <p><i class="fas fa-copyright"></i> 2025 - Prosedur Percobaan Fisika | Simulasi PhET</p>
+                     <p><i class="fas fa-copyright"></i>     - Brenda Nyanyi & Giscella Monggi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
